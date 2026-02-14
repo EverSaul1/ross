@@ -13,7 +13,9 @@ body {
   align-items: flex-end;
   justify-content: center;
   min-height: 100vh;
+  height: 100vh;
   overflow-x: hidden;
+  overflow-y: hidden;
   margin: 0;
 }
 .hoja {
@@ -94,6 +96,7 @@ body {
 
 }
 .titulo {
+  margin-bottom: 180px;
   font-family: "Arial Narrow", Arial, sans-serif;
   color: #E0BBE4;
   position: absolute;
@@ -110,7 +113,7 @@ body {
   font-weight: bold;
   letter-spacing: 3px;
   display: none;
-  bottom: 40px;
+  margin-bottom: 180px;
   opacity: 0;
   text-align: center;
   text-shadow:
@@ -191,7 +194,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   .fotos {
-    width: 80%;
+    width: 70%;
   }
   /* Estilos específicos para dispositivos con un ancho máximo de 600px */
 .flowers {
@@ -1707,6 +1710,7 @@ body {
 
 .container {
   max-width: 1200px;
+  max-height: 100vh;
   margin: 0 auto;
   padding: 20px;
 }
