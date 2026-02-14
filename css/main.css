@@ -102,6 +102,7 @@ body {
   position: absolute;
   font-weight: bold;
   letter-spacing: 3px;
+  z-index: 1000;
   opacity: 1;
   animation: fadeIn 3s ease-in-out forwards;
   text-align: center;
@@ -194,7 +195,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   .fotos {
-    width: 70%;
+    width: 65%;
   }
   /* Estilos específicos para dispositivos con un ancho máximo de 600px */
 .flowers {

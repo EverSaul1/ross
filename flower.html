@@ -8,7 +8,7 @@
     <link rel="icon" href="img/flowers.png" type="image/x-icon" />
     <title>Flower</title>
   </head>
-  <body class="container">
+  <body class="container" id="flowerContainer">
     <audio src="sound/bts.mp3" autoplay></audio>
     <div id="lyrics">
 
@@ -423,6 +423,25 @@
         </div>
       </div>
     </div>
+    <script>
+      const docElm = document.documentElement;
+
+      // Pedir fullscreen al primer toque del usuario
+      document.body.addEventListener('click', () => {
+        if (!document.fullscreenElement) {
+          if (docElm.requestFullscreen) {
+            docElm.requestFullscreen();
+          } else if (docElm.webkitRequestFullscreen) { // Safari
+            docElm.webkitRequestFullscreen();
+          } else if (docElm.msRequestFullscreen) { // IE/Edge
+            docElm.msRequestFullscreen();
+          }
+        }
+
+        // Quitar la clase container si quieres
+        document.body.classList.remove("container");
+      }, { once: true }); // solo se activa en el primer click
+    </script>
     <script src="anim.js"></script>
     <script src="main.js"></script>
   </body>
